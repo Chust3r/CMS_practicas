@@ -42,7 +42,6 @@
     "description": {
       "type": "text",
       "required": true,
-      "maxLength": 60,
       "minLength": 10
     }
   }
