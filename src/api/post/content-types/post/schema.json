@@ -4,7 +4,8 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "Post"
+    "displayName": "Post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,12 +23,12 @@
       "required": true
     },
     "cover": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "content": {
       "type": "richtext",
@@ -38,9 +39,11 @@
       "relation": "oneToOne",
       "target": "api::author.author"
     },
-    "date": {
-      "type": "date",
-      "required": true
+    "description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 60,
+      "minLength": 10
     }
   }
 }
